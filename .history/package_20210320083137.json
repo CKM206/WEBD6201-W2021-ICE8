@@ -2,7 +2,7 @@
   "name": "WEBD6201-W2021-ICE8",
   "version": "1.0.0",
   "description": "Demo Site for ICE 8",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "https://github.com/CKM206/WEBD6201-W2021-ICE8.git",
   "author": "Calvin May <calvinkylemay@gmail.com>",
   "license": "MIT",
