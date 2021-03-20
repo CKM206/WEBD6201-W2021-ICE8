@@ -358,11 +358,11 @@ namespace core
           {
             // add the contact info to localStorage
             localStorage.setItem(key, contact.serialize());
-            // return to the contact list
+            loadLink("edit");
           }
-          
-          loadLink("contact-list");
 
+          // return to the contact list
+          loadLink("contact-list");
           
         });
    
