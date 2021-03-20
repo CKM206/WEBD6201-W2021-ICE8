@@ -80,7 +80,7 @@ namespace core
    */
   function loadHeader(pageName: string): void
   {
-    $.get("./components/header.html", function(data)
+    $.get("./Views/components/header.html", function(data)
     {
       // Load the Header Data
       $("header").html(data);
@@ -103,7 +103,7 @@ namespace core
    */
   function loadContent(pageName: string, callback: Function): void
   {
-    $.get(`./content/${pageName}.html`, function(data)
+    $.get(`./Views/content/${pageName}.html`, function(data)
         {
           $("main").html(data);
 
@@ -120,7 +120,7 @@ namespace core
    */
   function loadFooter(): void
   {
-    $.get("./components/footer.html", function(data)
+    $.get("./Views/components/footer.html", function(data)
         {
           $("footer").html(data);
         });

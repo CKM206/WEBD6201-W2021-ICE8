@@ -158,7 +158,7 @@ var core;
     function displayEdit() {
         let key = router.LinkData;
         let contact = new core.Contact();
-        if (key != undefined && key != "") {
+        if (key != "") {
             contact.deserialize(localStorage.getItem(key));
             $("#fullName").val(contact.FullName);
             $("#contactNumber").val(contact.ContactNumber);

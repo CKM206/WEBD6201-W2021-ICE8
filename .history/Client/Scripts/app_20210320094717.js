@@ -29,21 +29,21 @@ var core;
         history.pushState({}, "", router.ActiveLink);
     }
     function loadHeader(pageName) {
-        $.get("./components/header.html", function (data) {
+        $.get("./Views/components/header.html", function (data) {
             $("header").html(data);
             $(`#${pageName}`).addClass("active");
             addLinkEvents();
         });
     }
     function loadContent(pageName, callback) {
-        $.get(`./content/${pageName}.html`, function (data) {
+        $.get(`./Views/content/${pageName}.html`, function (data) {
             $("main").html(data);
             toggleLogin();
             callback();
         });
     }
     function loadFooter() {
-        $.get("./components/footer.html", function (data) {
+        $.get("./Views/components/footer.html", function (data) {
             $("footer").html(data);
         });
     }
@@ -158,7 +158,7 @@ var core;
     function displayEdit() {
         let key = router.LinkData;
         let contact = new core.Contact();
-        if (key != undefined && key != "") {
+        if (key != "") {
             contact.deserialize(localStorage.getItem(key));
             $("#fullName").val(contact.FullName);
             $("#contactNumber").val(contact.ContactNumber);

@@ -10,6 +10,9 @@ loadStaticFiles();
 app.get('/', (req, res) => {
     displaySPA(res);
 });
+app.get('*', (req, res) => {
+    displaySPA(res);
+});
 app.listen(PORT, () => {
     console.log(`Server running at http://${HOST}:${PORT}/`);
 });

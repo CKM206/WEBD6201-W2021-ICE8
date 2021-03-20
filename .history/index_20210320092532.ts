@@ -16,15 +16,17 @@ const HOST: string = "localhost";
 loadStaticFiles();
 
 
-// Handles Routing
+// Handles Normal Routing
 app.get('/', (req, res) => {
     displaySPA(res);
 });
 
-// Handles Wild Card Routes (Helps us use the 404 page)
-app.get('*', (req, res) => {
+// A Wildcard route (Anything that isnt a proper route will send up to the 404 page)
+app.get('*', (req, res) =>
+{
   displaySPA(res);
 });
+
   
 // starts the Server and listens on PORT (3000)
   app.listen(PORT, () => {
@@ -56,6 +58,7 @@ function loadStaticFiles(): void
   // Use and load all the static files found in the "Client" Directory
   app.use(express.static(path.join(__dirname, "Client")));
 
+  // Use and load all the static files found in the "Views" Directory
   app.use(express.static(path.join(__dirname, "Views")));
 }
 

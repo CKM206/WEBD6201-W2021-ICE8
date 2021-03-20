@@ -21,10 +21,11 @@ app.get('/', (req, res) => {
     displaySPA(res);
 });
 
-// Handles Wild Card Routes (Helps us use the 404 page)
-app.get('*', (req, res) => {
+app.get('*', (req, res) =>
+{
   displaySPA(res);
 });
+
   
 // starts the Server and listens on PORT (3000)
   app.listen(PORT, () => {

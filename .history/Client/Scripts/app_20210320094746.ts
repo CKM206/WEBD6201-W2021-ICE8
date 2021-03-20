@@ -319,7 +319,7 @@ namespace core
       let contact = new core.Contact();
 
       // check to ensure that the key is not empty
-      if(key != undefined && key != "")
+      if(key != "")
       {
         // get contact info from localStorage
         contact.deserialize(localStorage.getItem(key));
