@@ -8,7 +8,7 @@ import express = require('express');
 
 
 const app = express();  // Use the express() constructor method to create an app
-const PORT = process.env.PORT || '3000';
+const PORT: number = process.env.PORT || '3000';
 const HOST: string = "localhost";
 
 // Load all static files
