@@ -354,7 +354,6 @@ namespace core
           contact.ContactNumber = $("#contactNumber").val().toString();
           contact.EmailAddress = $("#emailAddress").val().toString();
 
-          // Only allow a new Contact if all info is present
           if (contact.serialize())
           {
             // add the contact info to localStorage
